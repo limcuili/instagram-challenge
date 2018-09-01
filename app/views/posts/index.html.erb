@@ -1,0 +1,9 @@
+<% @all_posts.each do |post| %>
+  <p><%= post.caption %><br>
+    <small>posted <%= distance_of_time_in_words(post.created_at, Time.now) %> ago</small>
+  </p>
+<% end %>
+
+<%= link_to new_post_path do %>
+New post
+<% end %>
